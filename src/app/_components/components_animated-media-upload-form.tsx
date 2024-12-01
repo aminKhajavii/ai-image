@@ -223,6 +223,7 @@ export default function AnimatedMediaUploadForm() {
     selectedFile: File | undefined,
     source: "file" | "camera"
   ) => {
+    console.log(source);
     if (selectedFile) {
       // Validate file type and size
       if (!selectedFile.type.startsWith("image/")) {
@@ -240,6 +241,11 @@ export default function AnimatedMediaUploadForm() {
       setProcessingComplete(false);
     }
   };
+  if (isCameraActive) {
+    console.log("Camera is active");
+  }
+
+  // اگر نیاز دارید از source استفاده کنید
 
   // Submit handler
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
