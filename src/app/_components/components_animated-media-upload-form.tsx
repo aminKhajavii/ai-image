@@ -397,8 +397,14 @@ export default function AnimatedMediaUploadForm() {
                       backgroundPosition: `${-magnifyPosition.x * 2 + 100}px ${
                         -magnifyPosition.y * 2 + 100
                       }px`,
-                      backgroundSize: `${imageRef.current?.width * 2}px ${
-                        imageRef.current?.height * 2
+                      backgroundSize: `${
+                        imageRef.current?.width
+                          ? imageRef.current.width * 2
+                          : 200
+                      }px ${
+                        imageRef.current?.height
+                          ? imageRef.current.height * 2
+                          : 200
                       }px`,
                       zIndex: 10,
                     }}
