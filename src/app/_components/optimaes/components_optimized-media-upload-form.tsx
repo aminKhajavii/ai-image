@@ -14,8 +14,6 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-const LottieDotLottieReact: typeof DotLottieReact = DotLottieReact;
-
 const AnimatedCanvas = dynamic(() => import("./components_animated-canvas"), {
   ssr: false,
 });
